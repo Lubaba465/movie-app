@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<link rel="stylesheet" href="css/stylee.css">
+    <link rel="stylesheet" href="css/stylee.css">
 
 <head>
     <meta charset="utf-8">
-<title>movie App</title>
+<title>Movie App</title>
 </head>
 
-<body><div class="wrapper">
+<body>
+<div class="wrapper">
+<div class="one">
 
+</div>
 
 <%   for(var i=0; i<mealsitem.length;i++) {
 %>
-<div class="one">
-<h1><%=mealsitem[i].title%></h1>
+<div class="two">
+    <img src="https://image.tmdb.org/t/p/w1280/<%=mealsitem[i].poster_path%>">
+    <div class='title'>
+    <h1><%=mealsitem[i].title%></h1>
+
+    <p><%=mealsitem[i].vote_average%></p>
+    </div>
 </div><%}%>
 </div>
 

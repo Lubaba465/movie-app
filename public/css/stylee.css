@@ -1,0 +1,49 @@
+body{
+    background: black;
+    color: white;
+}
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(91, 88, 88, 0.47);
+
+}
+.two {
+
+
+    background-color: black;
+    border-radius: 5px;
+
+    color: white;
+    width: 300px;
+    height: 100%;
+    box-shadow: 0 4px 5px rgb(0 0 0 / 20%);
+    margin: 15px;
+    padding-bottom: 20px;
+}
+.two img{
+    width: 100%;
+}
+.one{
+    height:100px ;
+    background-color: black;
+    width: 100%;
+
+}
+h1{
+    text-align: left;
+
+   font-size: 20px;
+}
+.title{
+
+    padding: 10px;
+    display: flex;
+justify-content: space-around;
+}
+p{
+    background-color: rgba(86, 83, 83, 0.37);
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
