@@ -1,19 +1,87 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <link rel="stylesheet" href="css/stylee.css">
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
 <head>
     <meta charset="utf-8">
-<title>Food App</title>
+<title>Movie App</title>
+
+
 </head>
 
-<body>
-<form method="post" action="/">
 
-<input type="text" name="calorie" id="cityInput">
-    <button type="submit">search</button>
-</form>
+<body>
+<div class="wrapper">
+<div class="one">
+
+    <p class="logo" ><a href='/'  >MOVIE</a></p>
+
+
+
+<div class="search-container">
+    <form action="/movie" method='post'>
+      <input type="text" placeholder="Search Movie" name="movie">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+</div>
+</div>
+    <div class="three">
+        <h1>THE TOP RATED MOVIE: </h1>
+
+    </div>
+    <%   for(var i=0; i<item.length;i++) {
+%>
+<div class="two">
+<div class="image">
+    <img  src="https://image.tmdb.org/t/p/w1280/<%=item[i].poster_path%>" >
+    <div class='title' >
+    <h1><%=item[i].title%></h1>
+
+    <p><%=item[i].vote_average%></p>
+    </div>
+    <div class="overview">
+       <p> <%=item[i].overview%></p>
+    </div>
+</div>
+</div><%}%>
+    <div class="four">
+   <form action="/" method='post'>
+         <input type="hidden" id="INPUT" name='page' value=<%=pag%>>
+       <button id="last" >Back</button>
+        <button id="next" >Next</button>
+
+   </form>
+    </div>
+<script>
+
+
+
+function myFunction() {
+
+
+document.getElementById("INPUT").setAttribute("value",<%=pag%> );
+
+
+}
+
+document.getElementById("last").addEventListener("click", myFunctionlast);
+
+
+
+function myFunctionlast() {
+
+
+document.getElementById("INPUT").setAttribute("value",<%=last%> );
+
+
+
+}
+</script>
+
+
+
+</div>
 
 </body>
-
 </html>

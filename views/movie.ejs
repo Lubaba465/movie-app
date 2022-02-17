@@ -9,19 +9,34 @@
 
 <body>
 <div class="wrapper">
+
 <div class="one">
+    <p class="logo" ><a href='/'  >MOVIE</a></p>
+
+<div class="search-container">
+    <form action="/movie" method='post'>
+
+      <input type="text" placeholder="Search..." name="movie">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
 
 </div>
+</div>
 
-<%   for(var i=0; i<mealsitem.length;i++) {
+<%   for(var i=0; i<item.length;i++) {
 %>
 <div class="two">
-    <img src="https://image.tmdb.org/t/p/w1280/<%=mealsitem[i].poster_path%>">
-    <div class='title'>
-    <h1><%=mealsitem[i].title%></h1>
+<div class="image">
+    <img  src="https://image.tmdb.org/t/p/w1280/<%=item[i].poster_path%>" >
+    <div class='title' >
+    <h1><%=item[i].title%></h1>
 
-    <p><%=mealsitem[i].vote_average%></p>
+    <p><%=item[i].vote_average%></p>
     </div>
+    <div class="overview">
+       <p> <%=item[i].overview%></p>
+    </div>
+</div>
 </div><%}%>
 </div>
 

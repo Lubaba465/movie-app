@@ -1,11 +1,11 @@
-body{
+*{
     background: black;
     color: white;
 }
 .wrapper{
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(91, 88, 88, 0.47);
+    background-color: rgba(177, 176, 176, 0.47);
 
 }
 .two {
@@ -25,9 +25,25 @@ body{
     width: 100%;
 }
 .one{
+    background: black;
     height:100px ;
-    background-color: black;
     width: 100%;
+    display: flex;
+text-align: center;
+}
+.four{    background: black;
+    height:100px ;
+    width: 100%;
+    text-align: center;
+}
+.three{
+    width: 100%;
+
+    text-align: center;
+}
+.three h1{
+    background-color: rgba(177, 176, 176, 0.47);
+    font-size: 30px!important;
 
 }
 h1{
@@ -46,4 +62,102 @@ p{
     padding: 5px;
     padding-right: 10px;
     padding-left: 10px;
+}
+.logo {
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+    background: black;
+    margin-top: 0;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 20px 0px 100px auto;
+}
+input[type="text"] {
+    display: block;
+    width: calc(100% - 24px); /*20px [ left & Right ] padding + 4px border [ left & Right ] */
+    font-size: 18px;
+    font-weight: 600;
+    color: #d7d5db;
+    padding: 10px;
+    border: 2px solid #dfdee2;
+}
+
+.search-container form {
+    position: relative;
+}
+.search-container form button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    background: transparent;
+    border: transparent;
+    font-size: 20px;
+    color: #d2d2d4;
+    cursor: pointer;
+    outline: 0;
+}
+#next,#last{
+    background: #3c3a3a;
+    width: 30%;
+    height: 50px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-style: italic;
+}
+@media only screen and (max-width: 900px) {
+
+    .wrapper {
+        margin: 100px;
+
+
+    }
+
+
+
+    }
+@media only screen and (max-width: 600px) {
+    .one{
+        display: flex;
+        height: 150px;
+        padding-right: 50px;
+        padding-right: 50px;
+        padding-bottom: 30px;
+        margin-top: 0px;
+        flex-direction: column;
+    }
+}
+
+.overview {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+.logo a{
+    text-decoration: none;
+}
+
+.image:hover .overview {
+    transform: translateY(0);
+}
+.image {
+
+    position: relative;
+    overflow: hidden;
+}
+.one .logo{
+    width: 10%;
+    height: 60%;
+    padding-top: 10px;
+
 }
