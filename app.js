@@ -16,8 +16,14 @@ app.use(express.static("public"));
 app.get('/',function (req,res){
 
     const apiKey="c3c534aca07cfd73b1fa881938e3f95f";
-    let page=1;
 
+    let page=req.body.page;
+
+if(page===''){
+    page=1;
+}else {
+
+}
 
     const url="https://api.themoviedb.org/3/movie/top_rated?language=en-US&page="+page+"&api_key="+apiKey+"";
 
@@ -38,9 +44,9 @@ app.get('/',function (req,res){
             console.log(Data);
 
 
+            l=1;
 
-
-            res.render('home',{item:Data.results,pag:page,last:l});
+            res.render('home',{item:Data.results,pag:l,last:m});
 
         })})
 
@@ -53,7 +59,7 @@ app.get('/',function (req,res){
 
 
 })
-var l=2;
+var l=1;
 var m=1;
 let page=2;
 app.post("/",function (req,res){
@@ -133,6 +139,8 @@ app.post("/movie",function (req,res){
 
 
         console.log(response.statusCode);
+        if(response.statusCode==200){
+
         var data;
         response.on("data", function(chunk) {
             if (!data) {
@@ -141,6 +149,7 @@ app.post("/movie",function (req,res){
                 data += chunk;
             }
         });
+
 
 
 
@@ -155,7 +164,7 @@ app.post("/movie",function (req,res){
 
 
 
-            res.render('movie',{item:Data. results});
+            res.render('movie',{item:Data.results});
 
 
 
@@ -165,7 +174,10 @@ app.post("/movie",function (req,res){
 
 
 
-        });
+        });}else {
+            res.render('failure');
+
+        }
 
 
 
@@ -178,7 +190,8 @@ app.post("/movie",function (req,res){
 
 
 
-app.listen(3010
+app.listen(process.env.PORT ||3000
+
 
     , function() {
     console.log("Server started on port 3000");
