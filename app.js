@@ -2,11 +2,9 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const ejs = require("ejs");
 const https=require("https");
 
 const app = express();
-var posts=[];
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -190,9 +188,6 @@ app.post("/movie",function (req,res){
 
 
 
-app.listen(process.env.PORT ||3000
-
-
-    , function() {
+app.listen(process.env.PORT ||3000, function() {
     console.log("Server started on port 3000");
 });
