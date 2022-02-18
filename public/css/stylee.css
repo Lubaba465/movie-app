@@ -5,7 +5,6 @@
 .wrapper{
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(177, 176, 176, 0.47);
 
 
 }
@@ -41,7 +40,6 @@ text-align: center;
 
 }
 .three h3{
-    background-color: rgba(177, 176, 176, 0.47);
     font-size: 30px!important;
     text-align: center;
 
