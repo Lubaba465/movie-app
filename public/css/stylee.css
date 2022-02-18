@@ -7,6 +7,7 @@
     flex-wrap: wrap;
     background-color: rgba(177, 176, 176, 0.47);
 
+
 }
 .two {
 
@@ -18,7 +19,7 @@
     width: 300px;
     height: 600px;
     box-shadow: 0 4px 5px rgb(0 0 0 / 20%);
-    margin: 15px;
+    margin: 30px;
     padding-bottom: 20px;
 }
 .two img{
@@ -111,18 +112,19 @@ input[type="text"] {
     font-size: 20px;
     font-style: italic;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
 
     .wrapper {
-        margin: 100px;
-
-
+        margin-left: 100px;
+        margin-right: 100px
     }
 
 
 
     }
 @media only screen and (max-width: 600px) {
+
+
     .one{
         display: flex;
         height: 150px;
