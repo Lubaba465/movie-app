@@ -112,13 +112,15 @@ input[type="text"] {
     font-size: 20px;
     font-style: italic;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1500px) {
 
     .wrapper {
         margin-left: 100px;
         margin-right: 100px
     }
+.two{
 
+}
 
 
     }
